@@ -6,6 +6,7 @@ Short-term
 - Complete internal utils (net, sockets, string helpers)
 - Refactor core to use atoqu::Json, atoqu::Log, atoqu::FileSystem
 - Expand HTML docs (CLI, HTTP API, config, architecture)
+- Complete graphical kernels (CUDA, OpenCL, HIP, Metal, SYCL, DHC++, etc)
 
 Mid-term
 
