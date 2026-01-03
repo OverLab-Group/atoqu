@@ -1,0 +1,25 @@
+stages:
+  - build
+  - test
+  - analysis
+
+build:
+  stage: build
+  image: gcc:12
+  script:
+    - cmake -S . -B build -DATOQUENABLECUDA=OFF
+    - cmake --build build
+
+test:
+  stage: test
+  image: gcc:12
+  script:
+    - ctest --test-dir build --output-on-failure
+
+analysis:
+  stage: analysis
+  image: gcc:12
+  script:
+    - apt-get update && apt-get install -y cppcheck clang-tidy
+    - cppcheck --enable=all --inconclusive --std=c++17 src include utils
+    - clang-tidy src/*.cpp -- -Iinclude -Iutils

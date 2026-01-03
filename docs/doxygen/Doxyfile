@@ -1,0 +1,7 @@
+PROJECT_NAME           = "Atoqu"
+OUTPUT_DIRECTORY       = ../doxygen
+GENERATE_HTML          = YES
+GENERATE_XML           = YES
+RECURSIVE              = YES
+INPUT                  = ../../include ../../src ../../utils
+QUIET                  = YES

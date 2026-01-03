@@ -1,0 +1,41 @@
+body {
+  font-family: system-ui, sans-serif;
+  margin: 0;
+  background: #0f172a;
+  color: #e2e8f0;
+}
+
+header {
+  padding: 2rem;
+  background: linear-gradient(135deg, #1e3a8a, #0ea5e9);
+  color: white;
+}
+
+nav {
+  display: flex;
+  gap: 1rem;
+  padding: 1rem;
+  background: #1e293b;
+}
+
+nav a {
+  color: #94a3b8;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: white;
+}
+
+main {
+  padding: 2rem;
+  max-width: 900px;
+  margin: auto;
+}
+
+pre {
+  background: #1e293b;
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+}

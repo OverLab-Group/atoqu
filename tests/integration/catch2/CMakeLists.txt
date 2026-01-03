@@ -1,0 +1,3 @@
+addexecutable(testcatch2integration testintegration.cpp)
+targetlinklibraries(testcatch2integration PRIVATE atoqu_core)
+addtest(NAME integrationcatch2 COMMAND testcatch2integration)

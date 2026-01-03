@@ -1,0 +1,6 @@
+{
+  "topK": 5,
+  "embeddingSize": 16,
+  "rewardFactor": 1.2,
+  "decayFactor": 0.95
+}

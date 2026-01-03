@@ -1,0 +1,6 @@
+{
+  "provider": "llm",
+  "model": "atoqu-llm-embeddings-v0.9",
+  "dimension": 384,
+  "scale": 1.0
+}

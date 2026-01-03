@@ -1,0 +1,5 @@
+{
+  "backend": "none",
+  "dimension": 384,
+  "maxdocsper_batch": 8192
+}

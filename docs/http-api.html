@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Atoqu — HTTP API</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <header>
+    <h1>HTTP API</h1>
+    <p>Use Atoqu as a local HTTP search service</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>Start HTTP Server</h2>
+      <pre><code>./atoqu --http 8080</code></pre>
+    </section>
+
+    <section>
+      <h2>/search</h2>
+      <pre><code>curl -X POST http://localhost:8080/search \
+  -H "Content-Type: application/json" \
+  -d '{"query": "atomic search engine"}'</code></pre>
+    </section>
+
+    <section>
+      <h2>/feedback</h2>
+      <pre><code>curl -X POST http://localhost:8080/feedback \
+  -H "Content-Type: application/json" \
+  -d '{"id": "doc1", "mode": 0, "score": 1.0, "query": "atomic search engine"}'</code></pre>
+    </section>
+
+    <section>
+      <h2>/stats</h2>
+      <pre><code>curl http://localhost:8080/stats</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Atoqu Engine Documentation</p>
+  </footer>
+</body>
+</html>

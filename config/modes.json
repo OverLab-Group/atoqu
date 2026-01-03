@@ -1,0 +1,9 @@
+[
+  { "name": "NormalMode",   "enabled": true,  "weight": 1.0 },
+  { "name": "HybridMode",   "enabled": true,  "weight": 1.0 },
+  { "name": "LiteralMode",  "enabled": true,  "weight": 0.8 },
+  { "name": "VectorMode",   "enabled": true,  "weight": 0.8 },
+  { "name": "BM25Mode",     "enabled": true,  "weight": 0.9 },
+  { "name": "RecencyMode",  "enabled": false, "weight": 0.5 },
+  { "name": "TagBoostMode", "enabled": false, "weight": 0.5 }
+]

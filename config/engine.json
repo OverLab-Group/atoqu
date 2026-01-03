@@ -1,0 +1,18 @@
+{
+  "topK": 5,
+  "rewardFactor": 1.2,
+  "decayFactor": 0.95,
+  "cache": {
+    "enabled": true,
+    "maxEntries": 1024
+  },
+  "index": {
+    "segmentSize": 1024,
+    "path": "data/index.aix"
+  },
+  "optimizer": {
+    "enabled": true,
+    "profilePath": "data/query-profiles.json",
+    "minSamples": 5
+  }
+}

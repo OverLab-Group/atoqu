@@ -1,0 +1,39 @@
+
+Atoqu Architecture — v1.2
+
+- Core Engine: AtoquEngine
+- Stores:
+  - DocumentStore with tags and metadata
+  - VectorStore with cosine similarity (CPU) + optional GPU acceleration
+- Modes:
+  - NormalMode — browser-style, classic search with atomic/quantum-inspired internals
+  - LiteralMode — keyword search
+  - VectorMode — embedding-based search
+  - HybridMode — combined scoring
+  - BM25Mode — term-based ranking (v1.2)
+  - RecencyMode — time-aware ranking (v1.2)
+  - TagBoostMode — tag-aware ranking (v1.2)
+- Embedding:
+  - HashEmbeddingProvider (deterministic)
+  - LlmEmbeddingProvider (LLM-ready, config-driven)
+- GPU Acceleration:
+  - CUDA backend (NVIDIA) — production-ready cosine similarity
+  - OpenCL backend (cross-vendor) — host-side skeleton
+  - Vulkan, Metal, SYCL, HIP — safe, optional, fail-closed stubs
+- GPU usage:
+  - Offload vector similarity and embedding-heavy operations to GPU backends
+  - Reduce CPU pressure for large-scale queries
+- Security:
+  - Hardened config parsing
+  - Strict input validation for HTTP API
+  - Sanitizer-friendly code paths
+  - Static analysis integrated in CI
+- Utils:
+  - JSON, logging, filesystem, time, networking, strings
+- Plugins:
+  - Directory-based with plugin.json manifest
+- Tests:
+  - Unit, integration, perf, security, sanitizer smoke
+- Docs:
+  - Doxygen (C++ API)
+  - Sphinx + Breathe (architecture, modes, GPU, API)
